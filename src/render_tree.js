@@ -161,6 +161,9 @@ define(['./core', './markdown_helpers'], function(Markdown, MarkdownHelpers) {
 
     // convert this node
     switch ( jsonml[ 0 ] ) {
+    case "input":
+      jsonml[ 0 ] = "input";
+      break;
     case "header":
       jsonml[ 0 ] = "h" + jsonml[ 1 ].level;
       delete jsonml[ 1 ].level;
